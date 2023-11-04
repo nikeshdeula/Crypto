@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* font-family: 'Kalam', cursive;
+font-family: 'Poppins', sans-serif; */
+
+:root {
+  --h2-font: 5rem;
+  --p-font: 2rem;
+  --btn-font: 0.9rem;
+  --main-color: #001233;
+  --main-opt-color: #003566;
+  --text-color: #ffecd1;
+  --btn-color: #0466c8;
+  --opt-color: #ffc300;
+}
+
+h2 {
+  font-family: "Kalam", cursive;
+  color: var(--text-color);
+}
+
+p {
+  font-family: "Kalam", cursive;
+  color: #ffff;
+}
+
+a {
+  color: #ffff;
+}
+
+/* ------------------------------------------ */
+
+body {
+  background-color: var(--main-color);
+}
+
+/* ------header--- */
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25px 15%;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu li {
+  margin-right: 35px;
+}
+
+.menu li a::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--opt-color);
+  transition: all 1s;
+  margin: auto;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+.menu a:hover {
+  filter: brightness(50%), blur(20%);
+  text-shadow: 0px 0px 2.1px;
+}
+
+.menu .active {
+  color: #ffc300;
+}
+
+.btn {
+  background: var(--btn-color);
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  transition: all 0.3s;
+  font-size: var(--btn-font);
+}
+
+.btn:hover {
+  background-image: linear-gradient(20deg, red, blue);
+  cursor: pointer;
+  transform: translateY(-5px);
+  filter: brightness(100%), blur(50%);
+}
+
+.header_btn {
+  display: flex;
+  align-items: center;
+}
+
+.fa-bars {
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-left: 15px;
+  display: none;
+}
+
+/* ====large device==== */
+@media only screen and (max-width: 992px) {
+  .menu {
+    flex-direction: column;
+    order: 1;
+    position: absolute;
+    top: 100px;
+    right: -100%;
+    text-align: center;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    );
+    backdrop-filter: blur(10px);
+    width: 100%;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+
+  .menu.open {
+    display: block;
+    right: 0;
+  }
+
+  .menu li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7px;
+    align-items: center;
+  }
+  .menu li a {
+    margin: 7px;
+  }
+
+  .menu li a:hover::after {
+    width: 12%;
+  }
+}

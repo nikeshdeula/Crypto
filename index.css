@@ -251,7 +251,7 @@ section {
 
 /* ------trusted companies---- */
 
-.trusted {
+#trusted {
   text-align: center;
 }
 
@@ -305,5 +305,125 @@ section {
 
   .trusted_brands h3 {
     margin: 10px 0;
+  }
+}
+
+/* -----nexto trusted companies--- */
+
+#nexto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  column-gap: 80px;
+  margin: auto;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.nexto_img {
+  overflow: hidden;
+}
+
+.nexto_content h1 {
+  line-height: 3.5rem;
+}
+
+.nexto_content p {
+  display: flex;
+  margin: 10px 40px 10px 0px;
+  text-overflow: clip;
+}
+
+/* ----large device--- */
+@media only screen and (max-width: 992px) {
+  :root {
+    --h1-font: 1.7rem;
+    --h2-font: 1.6rem;
+    --h3-font: 1.2rem;
+    --p-font: 1rem;
+    --btn-font: 0.9rem;
+    --main-color: #001233;
+    --main-opt-color: #003566;
+    --text-color: #ffecd1;
+    --btn-color: #0466c8;
+    --opt-color: #ffc300;
+  }
+
+  .nexto_content h2 {
+    font-size: var(--h1-font);
+  }
+
+  .nexto_content h1 {
+    line-height: 2.5rem;
+  }
+}
+
+/* ----Innovative Cards---- */
+#innovative_features {
+  text-align: center;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.innovative_content {
+  margin: 80px 0;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 40px;
+  row-gap: 40px;
+}
+.card_item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  padding: 40px 0 40px 0;
+  animation-name: card_anim;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  transition: all 0.3 ease-in-out;
+  background: var(--main-opt-color);
+}
+
+.card_item h3 {
+  margin: 9px 0;
+}
+
+.card_item span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: var(--main-color);
+  border-radius: 50px;
+}
+
+.card_item i {
+  font-size: 19px;
+}
+
+@keyframes card_anim {
+  0% {
+    transform: translateY(2px);
+    background: linear-gradient(
+      30deg,
+      rgba(255, 0, 0, 0.3),
+      rgba(0, 17, 255, 0.4)
+    );
+  }
+
+  100% {
+    transform: translateY(-2px);
+    background: linear-gradient(
+      30deg,
+      rgba(255, 0, 0, 0.3),
+      rgba(0, 17, 255, 0.4)
+    );
   }
 }

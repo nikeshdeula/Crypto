@@ -27,6 +27,7 @@ font-family: 'Poppins', sans-serif; */
   --text-color: #ffecd1;
   --btn-color: #0466c8;
   --opt-color: #ffc300;
+  --opt-color-2: #14213d;
 }
 
 h1 {
@@ -62,6 +63,28 @@ a {
 body {
   background-color: var(--main-color);
 }
+
+.glowing_circle {
+  background: radial-gradient(blue, black);
+  width: 400px;
+  height: 300px;
+  border-radius: 50%;
+  filter: brightness(10%);
+  filter: blur(90px);
+  z-index: -1;
+}
+
+.glowing_circle_0 {
+  background: radial-gradient(blue, black);
+  width: 400px;
+  height: 300px;
+  border-radius: 50%;
+  filter: brightness(10%);
+  filter: blur(90px);
+  z-index: -1;
+}
+
+
 
 /* ------header--- */
 
@@ -148,11 +171,9 @@ body {
     top: 100px;
     right: -100%;
     text-align: center;
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0)
-    );
+    background: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     width: 100%;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
@@ -225,30 +246,26 @@ section {
   box-shadow: 0px 20px 30px 0px rgba(0, 2, 7, 0.3);
 }
 
-.glowing_circle {
+
+/* ---glowing --circle--- */
+.banner_bg {
+  position: relative;
+}
+
+.banner_glow {
   position: absolute;
   top: -10rem;
   left: -15rem;
-  z-index: -1;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(blue, black);
-  filter: brightness(10%);
-  filter: blur(90px);
-  border-radius: 100%;
 }
 
-.glowing_circle_1 {
+.banner_glow_1 {
   position: absolute;
   bottom: -5rem;
   right: -20rem;
   z-index: -1;
   width: 500px;
   height: 500px;
-  background: radial-gradient(blue, black);
-  filter: brightness(10%);
-  filter: blur(90px);
-  border-radius: 100%;
+
 }
 
 /* ------trusted companies---- */
@@ -367,10 +384,11 @@ section {
   margin: auto;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .innovative_content {
-  margin: 80px 0;
+  margin-bottom: 80px;
 }
 
 .card {
@@ -392,7 +410,9 @@ section {
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
   transition: all 0.3 ease-in-out;
-  background: var(--main-opt-color);
+  background: linear-gradient(80deg,
+      var(--opt-color-2),
+      var(--main-opt-color));
 }
 
 .card_item h3 {
@@ -413,28 +433,32 @@ section {
   font-size: 19px;
 }
 
+
+/* ----glowing effects---- */
+
+.innovative_bg {
+  position: relative;
+}
+
+.innovative_glow {
+  position: absolute;
+  top: 190px;
+  left: 560px;
+}
+
 @keyframes card_anim {
   0% {
     transform: translateY(2px);
-    background: linear-gradient(
-      30deg,
-      rgba(255, 0, 0, 0.3),
-      rgba(0, 17, 255, 0.4)
-    );
+
   }
 
   100% {
     transform: translateY(-2px);
-    background: linear-gradient(
-      30deg,
-      rgba(255, 0, 0, 0.3),
-      rgba(0, 17, 255, 0.4)
-    );
+
   }
 }
 
 /* ----crypto_world----- */
-
 .crypto_world_img {
   overflow: hidden;
   position: relative;
@@ -451,7 +475,7 @@ section {
   bottom: -100%;
   margin: auto 45px;
   transition: all 0.3s ease-out;
-  cursor: progress;
+  cursor: pointer;
 }
 
 .crypto_world_content p {
@@ -477,6 +501,105 @@ section {
 }
 
 
-.crypto_world_img:hover >  .crypto_world_content{
-bottom: 80px;
+.crypto_world_img:hover>.crypto_world_content {
+  bottom: 80px;
+}
+
+.crypto_glow {
+  position: relative;
+}
+
+
+/* ---glowing effects--- */
+
+.crypto_bg {
+  position: relative;
+}
+
+.crypto_glow {
+  position: absolute;
+  top: 0px;
+  left: 90px;
+}
+
+
+.crypto_glow_1 {
+  position: absolute;
+  bottom: 0;
+  right: 60px;
+}
+
+
+/* ------wallet_steps----- */
+
+.wallet_steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  column-gap: 80px;
+}
+
+.wallet_steps_content p {
+  margin: 8px 0px;
+}
+
+.wallet_steps_content h1 {
+  line-height: 60px;
+}
+
+
+
+.accordin_title {
+  background: var(--btn-color);
+  width: 100%;
+  padding-left: 15px;
+}
+
+
+.accordin {
+  position: relative;
+  overflow: hidden;
+  height: 40px;
+  margin-bottom: 15px;
+  transition: all 0.3s;
+}
+
+.accordin.acc {
+  height: 150px;
+}
+
+.accordin .fa-angle-down {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.fa-minus {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+
+.accordin_para {
+  position: absolute;
+  top: -80px;
+  background: var(--main-opt-color);
+  padding: 15px;
+  z-index: -1;
+  transition: all 0.7s;
+
+}
+
+
+.accordin.acc .accordin_para {
+  display: block;
+  top: 40px;
+  overflow-y: auto;
+}
+
+.fa-angle-up {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: none;
 }

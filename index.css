@@ -549,9 +549,10 @@ section {
 
 
 .accordin_title {
-  background: var(--btn-color);
+  background: linear-gradient(150deg, var(--main-opt-color), var(--opt-color-2));
   width: 100%;
   padding-left: 15px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -561,10 +562,11 @@ section {
   height: 40px;
   margin-bottom: 15px;
   transition: all 0.3s;
+
 }
 
 .accordin.acc {
-  height: 150px;
+  height: 130px;
 }
 
 .accordin .fa-angle-down {
@@ -593,7 +595,7 @@ section {
 
 .accordin.acc .accordin_para {
   display: block;
-  top: 40px;
+  top: 30px;
   overflow-y: auto;
 }
 

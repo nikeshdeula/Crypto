@@ -60,3 +60,46 @@ accordin.forEach((item) => {
     // }
   });
 });
+
+const swiper = new Swiper(".card_container", {
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 25,
+  loopFillGroupWithBlank: true,
+  breakpoints: {
+    960: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    760: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    540: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 3,
+    },
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});

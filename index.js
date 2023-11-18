@@ -103,3 +103,23 @@ const swiper = new Swiper(".card_container", {
     el: ".swiper-scrollbar",
   },
 });
+
+// ------question accordin ----
+
+var questionAcc = document.querySelectorAll(".question_wrapper");
+
+questionAcc.forEach((item) => {
+  var questionTitle = item.querySelector(".question_title");
+
+  questionTitle.addEventListener("click", () => {
+    for (var i = 0; i < questionAcc.length; i++) {
+      if (questionAcc[i] !== item) {
+        questionAcc[i].classList.remove("show");
+      } else {
+        item.classList.toggle("show");
+      }
+    }
+  });
+
+  // console.log(item);
+});

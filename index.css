@@ -15,41 +15,66 @@ body {
 font-family: 'Poppins', sans-serif; */
 
 :root {
+  /* ----fonts---- */
   --h1-font: 2.8rem;
   --h2-font: 1.6rem;
   --h3-font: 1.2rem;
+  --h4-font: 1rem;
   --p-font: 1rem;
+
+  /* ---btn--- */
   --btn-font: 0.9rem;
+
+  /* ----colors---- */
   --main-color: #001233;
   --main-opt-color: #003566;
   --text-color: #ffecd1;
   --btn-color: #0466c8;
   --opt-color: #ffc300;
   --opt-color-2: #14213d;
+
+
+}
+
+.container {
+  padding: 80px 15% 70px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: "Kalam", cursive;
+  color: var(--text-color);
 }
 
 h1 {
   font-size: var(--h1-font);
-  font-family: "Kalam", cursive;
-  color: var(--text-color);
 }
 
 h2 {
   font-size: var(--h2-font);
-  font-family: "Kalam", cursive;
-  color: var(--text-color);
+
 }
 
 h3 {
   font-size: var(--h3-font);
-  font-family: "Kalam", cursive;
-  color: var(--text-color);
+
+}
+
+h4 {
+  font-size: var(--h3-font);
+  color: white;
+
 }
 
 p {
   font-size: var(--p-font);
-  font-family: "Kalam", cursive;
-  color: #ffff;
+  color: white;
+
+
 }
 
 a {
@@ -206,11 +231,8 @@ body {
 
 /* -----banner---- */
 
-section {
-  padding: 80px 15% 70px;
-}
 
-#banner {
+.banner {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   column-gap: 80px;
@@ -268,7 +290,7 @@ section {
 
 /* ------trusted companies---- */
 
-#trusted {
+.trusted {
   text-align: center;
 }
 
@@ -305,18 +327,6 @@ section {
 /* ----large device ---- */
 
 @media only screen and (max-width: 992px) {
-  :root {
-    --h1-font: 2.1rem;
-    --h2-font: 1.6rem;
-    --h3-font: 1.2rem;
-    --p-font: 1rem;
-    --btn-font: 0.9rem;
-    --main-color: #001233;
-    --main-opt-color: #003566;
-    --text-color: #ffecd1;
-    --btn-color: #0466c8;
-    --opt-color: #ffc300;
-  }
 
   .trusted_brands i {
     display: block;
@@ -329,7 +339,7 @@ section {
 
 /* -----nexto trusted companies--- */
 
-#nexto {
+.nexto {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   column-gap: 80px;
@@ -354,19 +364,6 @@ section {
 
 /* ----large device--- */
 @media only screen and (max-width: 992px) {
-  :root {
-    --h1-font: 1.7rem;
-    --h2-font: 1.6rem;
-    --h3-font: 1.2rem;
-    --p-font: 1rem;
-    --btn-font: 0.9rem;
-    --main-color: #001233;
-    --main-opt-color: #003566;
-    --text-color: #ffecd1;
-    --btn-color: #0466c8;
-    --opt-color: #ffc300;
-  }
-
   .nexto_content h2 {
     font-size: var(--h1-font);
   }
@@ -377,7 +374,7 @@ section {
 }
 
 /* ----Innovative Cards---- */
-#innovative_features {
+.innovative_features {
   text-align: center;
   margin: auto;
   align-items: center;
@@ -531,22 +528,6 @@ section {
 /* -----large - device --- */
 
 @media only screen and (max-width:992px) {
-  :root {
-    --h1-font: 2.8rem;
-    --h2-font: 1.6rem;
-    --h3-font: 1.2rem;
-    --p-font: 1rem;
-    --btn-font: 0.9rem;
-    --main-color: #001233;
-    --main-opt-color: #003566;
-    --text-color: #ffecd1;
-    --btn-color: #0466c8;
-    --opt-color: #ffc300;
-    --opt-color-2: #14213d;
-  }
-
-
-
   .crypto_world_content h2 {
     position: absolute;
     display: flex;
@@ -765,4 +746,103 @@ h3 {
   height: 80px;
   border-radius: 50%;
 
+}
+
+
+
+/* ......question---- */
+
+.questions {
+  text-align: center;
+
+}
+
+.questions h1 {
+  line-height: 65px;
+}
+
+.question_accordin {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  text-align: center;
+  row-gap: 15px;
+  column-gap: 40px;
+}
+
+.question_wrapper {
+  height: 50px;
+  overflow-y: hidden;
+  transition: all .3s ease;
+}
+
+.question_wrapper.show {
+  height: 130px;
+}
+
+
+.question_title {
+  background: linear-gradient(30deg, var(--main-color), var(--opt-color-2));
+  padding: 10px 0;
+  cursor: pointer;
+  position: relative;
+
+}
+
+
+.fa-angle-down {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  transition: all .3s ease-in;
+}
+
+.question_wrapper.show .fa-angle-down {
+  transform: rotate(180deg);
+}
+
+.question_content {
+  background: var(--main-opt-color);
+  padding: 15px 0;
+  display: none;
+}
+
+.question_wrapper.show .question_content {
+  display: block;
+}
+
+
+
+/* ----large---device---- */
+@media only screen and (max-width:968px) {
+
+  .question_accordin {
+    display: grid;
+  }
+
+  .question_content {
+    text-align: left;
+  }
+
+  .question_title h3 {
+    font-size: calc(var(--h3-font) - 5px);
+  }
+
+}
+
+/* ----medium device--- */
+@media only screen and (max-width:768px) {
+  .question_accordin {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .question_content {
+    text-align: left;
+  }
+
+  /* .question_title h3 {
+    font-size: 13px;
+  } */
 }

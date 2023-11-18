@@ -911,3 +911,41 @@ h3 {
   border-radius: 3px;
 
 }
+
+
+
+/* ----footer---- */
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  margin: auto;
+  column-gap: 40px;
+  justify-content: center;
+}
+
+.footer_desc h3 {
+  margin-right: 19px;
+  text-align: center;
+}
+
+.footer_desc h3 {
+  color: var(--text-color, #ffff);
+  text-align: left;
+}
+
+footer hr {
+  margin: 18px 0;
+  opacity: 0.1;
+
+}
+
+footer .bottom_footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .container {
+
+  padding: 50px 15% 10px;
+
+}

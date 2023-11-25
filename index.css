@@ -457,7 +457,7 @@ body {
 .crypto_world_img {
   overflow: hidden;
   position: relative;
-  height: 300px;
+  min-height: fit-content;
   width: 100%;
   background: linear-gradient(to top, var(--main-color), rgba(4, 27, 100, 0.9)),
     url(//unsplash.it/200/200) center;
@@ -465,17 +465,20 @@ body {
 }
 
 .crypto_world_content {
+  transform: translateY(650px);
   text-align: center;
-  position: absolute;
-  bottom: -100%;
-  margin: auto 45px;
+  margin: 50px 10px;
   transition: all 0.3s ease-out;
   cursor: pointer;
+
 }
 
 .crypto_world_content p {
-  margin: 2px 0;
+  width: 70%;
+  text-align: center;
+  margin: 10px auto;
 }
+
 
 .crypto_world_list {
   display: flex;
@@ -497,7 +500,8 @@ body {
 
 
 .crypto_world_img:hover>.crypto_world_content {
-  bottom: 80px;
+  transform: translateY(0px);
+
 }
 
 .crypto_glow {
@@ -524,53 +528,29 @@ body {
   right: 60px;
 }
 
-
-/* -----large - device --- */
-
-@media only screen and (max-width:992px) {
-  .crypto_world_content h2 {
-    position: absolute;
-    display: flex;
-    left: 35px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    bottom: 120px;
-  }
-
-  .crypto_world_content {
-    display: grid;
-    width: 100%;
-  }
-
-  .crypto_world_content .crypto_world_desc {
-    position: absolute;
-    text-align: center;
-    width: 90%;
-    left: 0;
-    bottom: 60px;
-    /* color: rebeccapurple; */
-    /* width: 100%; */
-  }
-
+.crypto_world_list {
+  flex-wrap: wrap;
+  margin: 10px 0;
 
 }
+
 
 .crypto_world_points {
   display: flex;
-  flex-direction: row;
-  /* flex-wrap: nowrap; */
   width: 100%;
-  align-items: center;
   column-gap: 12px;
-  justify-content: center;
-  margin: 10px 0;
+  margin: 15px 0;
   background: var(--main-color);
   border-radius: 50px;
   width: max-content;
-  font-size: 10px;
-  /* padding: 5px 15px; */
+  font-size: 30px;
 }
+
+
+.crypto_world_points p {
+  text-align: left;
+}
+
 
 
 /* ------wallet_steps----- */
@@ -665,6 +645,8 @@ body {
   .wallet_steps {
     text-align: center;
     row-gap: 25px;
+    grid-template-columns: 1fr;
+
   }
 
   .wallet_steps_img {
@@ -679,7 +661,25 @@ body {
     margin-bottom: 25px;
   }
 
+
+  .wallet_steps_content h1 {
+    line-height: 60px;
+  }
+
+  .wallet_steps_content h1 {
+    line-height: 65px;
+    margin-top: 30px;
+
+  }
+
+  .wallet_steps_content p {
+    line-height: 65px;
+    margin-bottom: 30px;
+
+  }
+
 }
+
 
 
 /* ---testimonial---- */
@@ -912,6 +912,16 @@ h3 {
 
 }
 
+@media only screen and (max-width:768px) {
+  .subscribe_title {
+    left: 80px;
+  }
+
+  .subscribe_input {
+    left: 130px;
+  }
+}
+
 
 
 /* ----footer---- */
@@ -921,6 +931,7 @@ h3 {
   margin: auto;
   column-gap: 40px;
   justify-content: center;
+  row-gap: 30px;
 }
 
 .footer_desc h3 {
@@ -932,6 +943,7 @@ h3 {
   color: var(--text-color, #ffff);
   text-align: left;
 }
+
 
 footer hr {
   margin: 18px 0;

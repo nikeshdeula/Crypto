@@ -37,10 +37,28 @@ font-family: 'Poppins', sans-serif; */
 
 }
 
+/* ---- */
 .container {
   padding: 80px 15% 70px;
 }
 
+/* ----small device --- */
+@media screen and (max-width:425px) {
+  .container {
+    padding: 25px 15% 70px;
+  }
+
+  .container h1 {
+    font-size: calc(var(--h1-font) - 10px);
+    line-height: 2.6rem;
+  }
+
+
+
+
+}
+
+/* ---- */
 
 h1,
 h2,
@@ -304,9 +322,25 @@ body {
 
 }
 
+
+/* ----- medium devices---- */
 @media screen and (max-width:768px) {
   .banner_btn {
     display: flex;
+  }
+}
+
+
+/* ----small  devices--- */
+
+@media screen and (max-width:425px) {
+  .banner {
+    text-align: center;
+    row-gap: 30px;
+  }
+
+  .banner_btn {
+    justify-content: center;
   }
 }
 
@@ -359,6 +393,19 @@ body {
   }
 }
 
+/* ---- small device --- */
+
+@media screen and (max-width: 442px) {
+  .trusted_brands i {
+    font-size: 0.8rem;
+
+  }
+
+  .trusted_brands h3 {
+    font-size: calc(var(--h3-font) -15px);
+  }
+}
+
 /* -----nexto trusted companies--- */
 
 .nexto {
@@ -389,21 +436,28 @@ body {
   /* text-overflow: clip; */
 }
 
-/* ----large device--- */
-@media screen and (max-width: 992px) {
-  /* .nexto_content h1 {
-    font-size: var(--h1-font);
-  } */
-
-
-}
-
+/* ----medium device--- */
 
 @media screen and (max-width:768px) {
   .nexto_content h1 {
     line-height: 3rem;
   }
 }
+
+/* ----medium device--- */
+
+@media screen and (max-width:425px) {
+  .nexto {
+    text-align: center;
+    row-gap: 1.8rem;
+  }
+
+
+}
+
+
+
+
 
 /* ----Innovative Cards---- */
 .innovative_features {
@@ -672,8 +726,6 @@ body {
 }
 
 
-/* ---large - device--- */
-@media screen and (max-width:992px) {}
 
 /* ----medium - device---- */
 @media screen and (max-width:768px) {
@@ -681,14 +733,22 @@ body {
     column-gap: 50px;
   }
 
-  .wallet_steps_content h1 {
-    line-height: 2.5rem;
+}
+
+
+@media screen and (max-width: 442px) {
+  .wallet_steps {
+    text-align: center;
+    row-gap: 2rem;
   }
 }
 
 
-
 /* ---testimonial---- */
+
+.testimonial .container {
+  padding: 80 10% 70px;
+}
 
 .testimonial h1,
 h3 {
@@ -701,24 +761,6 @@ h3 {
   width: 100%;
 }
 
-.card_container {
-  margin: 0 50px;
-  overflow: hidden;
-
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  position: absolute;
-}
-
-.swiper-button-next {
-  right: 0;
-}
-
-.swiper-button-prev {
-  left: 0;
-}
 
 .card_wrapper {
   padding: 30px;
@@ -763,12 +805,12 @@ h3 {
 
 }
 
-.questions h1 {
-  line-height: 65px;
+.questions p {
+  margin: 20px 0;
 }
 
 .question_accordin {
-  margin-top: 80px;
+  margin-top: px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
@@ -855,9 +897,6 @@ h3 {
 
 /* ------subscribe----- */
 .subscribe_img {
-  /* position: relative; */
-  display: grid;
-
   align-items: center;
   justify-content: center;
   margin: auto 0;
@@ -915,14 +954,32 @@ h3 {
 
 }
 
+
+/* ----medium device ---- */
 @media screen and (max-width:768px) {
-  .subscribe_title {
-    left: 80px;
+  .subscribe_content {
+    padding: 40px;
+  }
+
+  .subscribe_input h1 {
+    font-size: calc(var(--h1-font) - 20px);
   }
 
   .subscribe_input {
-    left: 130px;
+    display: flex;
+    justify-content: center;
   }
+
+  .subscribe_input input {
+    width: auto;
+
+  }
+}
+
+@media screen and (max-width:442px) {
+  /* .subscribe_content {
+    margin: 50px;
+  } */
 }
 
 
